@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    color: #ffffff;
+    background: #1c1c1c;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.main-container {
+    width: 100%;
+    padding: 1em;
+}
+
+@media (width >= 1000px) {
+    .main-container {
+        padding: 0em 5em;
+    }
+}
+
+.shape img {
+    width: 50px;
+    margin: 0em 1em;
+}
+
+.shape img:hover {
+    cursor: pointer;
+    transform: translateY(-10px);
+    transition: 0.5s;
+}
+
+.container {
+    width: 100%;
+    padding: 2em 0em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.shapes {
+    flex-direction: row;
+    background: #323232;
+    border-radius: 100px;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 2em 0em;
+}
+
+.info h1 {
+    color: #65ffbc;
+}
+
+.shape_container_holder {
+    display: flex;
+    justify-content: center;
+}
+
+#square {
+    position: relative;
+    animation-name: square;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.display {
+    height: 50vh;
+    border-radius: 120px;
+    background: #323232;
+    overflow: hidden;
+}
+
+@keyframes move_square {
+    0% {top: 0px; left: 0px;}
+    25% {top: -100px; left: 0px}
+    50% {top: -100px; left: 100px}
+    75% {top: 0px; left: 100px}
+    100% {top: 0px;left: 0px;}
+}
+
+@keyframes move_circle {
+    0% {top: 0px; left: 0px;}
+    50% {top: -100px; left: 100px}
+    100% {top: 0px; left: -1000px;}
+}
+
+@keyframes move_triangle {
+    0% {top: 0px; left: 0px; transform: rotate(0deg)}
+    50% {top: 100px; left: 100px}
+    100% {top: -1000px; left: -1000px; transform: rotate(360deg)}
+}
+
+@keyframes move_pentagon {
+    0% {top: 0px; left: 0px; transform: skewX(0deg)}
+    50% {top: 100px; left: 100px}
+    100% {top: -1000px; left: -1000px; transform: skewX(100deg)}
+}
